@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tienda>
+	<menu>
+		<opcion Url="/Default.aspx?Id=0" Texto="Inicio" Id="0"></opcion>
+		<opcion Url="/Default.aspx?Id=1" Texto="Productos" Id="1"></opcion>
+		<opcion Url="/Default.aspx?Id=2" Texto="Nosotros" Id="2"></opcion>
+		<opcion Url="/Default.aspx?Id=3" Texto="Contacto" Id="3"></opcion>
+		
+		
+	
+	</menu>
+	<Productos>
+		<tipo Nombre ="Dama">
+			<prenda Nombre="Vestido" claveProducto="1">
+				<Descripcion><![CDATA[Vestido color rojo talla grande]]></Descripcion>
+				<Precio>$500</Precio>
+				<Imagen>/img/vestidoRojo.jpg</Imagen>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="Falda" claveProducto="2">
+				<Descripcion><![CDATA[Falda corta color rojo talla grande]]></Descripcion>
+				<Precio>$450</Precio>
+				<Imagen>/img/falda.jpg</Imagen>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="Pantalon de mezclilla" claveProducto="3">
+				<Descripcion><![CDATA[pantalon de mezclilla talla chica]]></Descripcion>
+				<Precio>$300</Precio>
+				<Imagen>/img/pantalon.jpg</Imagen>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="Blusa" claveProducto="4">
+				<Descripcion><![CDATA[Blusa corta color verde talla mediana]]></Descripcion>
+				<Precio>$200</Precio>
+				<Imagen>/img/blusa.jpg</Imagen>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="Bufanda" claveProducto="5">
+				<Descripcion><![CDATA[bufanda larga ]]></Descripcion>
+				<Precio>$100</Precio>
+				<Imagen>/img/bufanda.jpg</Imagen>
+				<valoracion>4.8</valoracion>
+			</prenda>
+		</tipo>
+		<tipo Nombre ="Caballero">
+			<prenda Nombre="Camisa" claveProducto="1">
+				<Descripcion><![CDATA[Camisa manga larga azul]]></Descripcion>
+				<Precio>$500</Precio>
+				<Imagen>/img/camisa.jpg</Imagen>
+			</prenda>
+			<prenda Nombre="Bermuda" claveProducto="2">
+				<Descripcion><![CDATA[Bermuda color azul talla 32 ]]></Descripcion>
+				<Precio>$350</Precio>
+				<Imagen>/img/bermuda.jpg</Imagen>
+			</prenda>
+			<prenda Nombre="camisa polo" claveProducto="3">
+				<Descripcion><![CDATA[Camisa tipo polo color azul obscuro talla M]]></Descripcion>
+				<Precio>$500</Precio>
+				<Imagen>/img/polo.jpg</Imagen>
+			</prenda>
+			<prenda Nombre="Gorra" claveProducto="4">
+				<Descripcion><![CDATA[Gorra color rojo para caballero]]></Descripcion>
+				<Precio>$200</Precio>
+				<Imagen>/img/gorra.jpg</Imagen>
+			</prenda>
+			<prenda Nombre="Pantalon" claveProducto="5">
+				<Descripcion><![CDATA[Pantalon deportillo talla 32]]></Descripcion>
+				<Precio>$450</Precio>
+				<Imagen>/img/pantalonD.jpg</Imagen>
+			</prenda>
+
+		</tipo>
+		<tipo Nombre ="Niño">
+			
+
+		</tipo>
+		<tipo Nombre ="calzado">
+			<prenda Nombre="Zapatos" claveProducto="1">
+				<Descripcion><![CDATA[Pantalon deportillo talla 32]]></Descripcion>
+				<Precio>$800</Precio>
+				<Imagen>/img/product_01.jpg</Imagen>
+			</prenda>
+
+
+		</tipo>
+		<tipo Nombre ="Deportiva">
+
+		</tipo>
+		<tipo Nombre ="Joyeria">
+
+		</tipo>
+		
+	</Productos>
+	<Datos>
+		<NombreTienda>Novedades la Villa </NombreTienda>
+		<Direccion>Blvd costa dorada #572 Col. francisco villa, Apulco Guerrero.</Direccion>
+		<Descripcion>
+			Es una idea de negocio que surge como respuesta a la necesidad del consumidor que demanda una moda extranjera centrada al estilo oriental.
+
+			El punto de este tipo de negocio es darle al cliente un solo lugar donde pueda adquirir todo lo que necesite para una moda asiática. Por ello es que el inventario planea cubrir ropa tanto para hombre como para mujer; así como un estilo contemporáneo y tradicional (por ejemplo los vestidos mao oriental).
+		</Descripcion>
+		<telefono>744-294-6788</telefono>
+		<Imagen>/img/1.jpg</Imagen>
+		<ubicacion></ubicacion>
+	
+	</Datos>
+
+</Tienda>

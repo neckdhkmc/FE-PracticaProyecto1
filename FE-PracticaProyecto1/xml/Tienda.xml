@@ -5,81 +5,148 @@
 		<opcion Url="/Default.aspx?Id=1" Texto="Productos" Id="1"></opcion>
 		<opcion Url="/Default.aspx?Id=2" Texto="Nosotros" Id="2"></opcion>
 		<opcion Url="/Default.aspx?Id=3" Texto="Contacto" Id="3"></opcion>
-		
-		
-	
+		<opcion Url="/Default.aspx?Id=4" Texto="Venta Nocturna" Id="4"></opcion>
+
+
+
+
 	</menu>
 	<Productos>
 		<tipo Nombre ="Dama">
-			<prenda Nombre="Vestido" claveProducto="1">
+			<prenda Nombre="Vestido" claveProducto="1" VentaNoc="SI">
 				<Descripcion><![CDATA[Vestido color rojo talla grande]]></Descripcion>
 				<Precio>$500</Precio>
 				<Imagen>/img/vestidoRojo.jpg</Imagen>
+				<talla>Mediana</talla>
+				<promocion></promocion>
 				<valoracion>4.8</valoracion>
 			</prenda>
-			<prenda Nombre="Falda" claveProducto="2">
+			<prenda Nombre="Falda" claveProducto="2"  VentaNoc="SI">
 				<Descripcion><![CDATA[Falda corta color rojo talla grande]]></Descripcion>
 				<Precio>$450</Precio>
 				<Imagen>/img/falda.jpg</Imagen>
+				<talla>Mediana</talla>
 				<valoracion>4.8</valoracion>
 			</prenda>
 			<prenda Nombre="Pantalon de mezclilla" claveProducto="3">
 				<Descripcion><![CDATA[pantalon de mezclilla talla chica]]></Descripcion>
 				<Precio>$300</Precio>
 				<Imagen>/img/pantalon.jpg</Imagen>
+				<talla>Mediana</talla>
 				<valoracion>4.8</valoracion>
 			</prenda>
 			<prenda Nombre="Blusa" claveProducto="4">
 				<Descripcion><![CDATA[Blusa corta color verde talla mediana]]></Descripcion>
 				<Precio>$200</Precio>
 				<Imagen>/img/blusa.jpg</Imagen>
+				<talla>Mediana</talla>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="Bufanda" claveProducto="5"  VentaNoc="SI">
+				<Descripcion><![CDATA[bufanda larga ]]></Descripcion>
+				<Precio>$100</Precio>
+				<Imagen>/img/bufanda.jpg</Imagen>
+				<talla>Mediana</talla>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="rf" claveProducto="5">
+				<Descripcion><![CDATA[bufanda larga ]]></Descripcion>
+				<Precio>$100</Precio>
+				<Imagen>/img/bufanda.jpg</Imagen>
+				<talla>Mediana</talla>
+				<valoracion>4.8</valoracion>
+			</prenda>
+			<prenda Nombre="rfrdd" claveProducto="5"  VentaNoc="SI">
+				<Descripcion><![CDATA[bufanda larga ]]></Descripcion>
+				<Precio>$100</Precio>
+				<Imagen>/img/bufanda.jpg</Imagen>
+				<talla>Mediana</talla>
 				<valoracion>4.8</valoracion>
 			</prenda>
 			<prenda Nombre="Bufanda" claveProducto="5">
 				<Descripcion><![CDATA[bufanda larga ]]></Descripcion>
 				<Precio>$100</Precio>
 				<Imagen>/img/bufanda.jpg</Imagen>
+				<talla>Mediana</talla>
 				<valoracion>4.8</valoracion>
 			</prenda>
-		</tipo>
+			<prenda Nombre="rf" claveProducto="5">
+				<Descripcion><![CDATA[bufanda larga ]]></Descripcion>
+				<Precio>$100</Precio>
+				<Imagen>/img/bufanda.jpg</Imagen>
+				<valoracion>4.8</valoracion>
+			</prenda>
+				</tipo>
 		<tipo Nombre ="Caballero">
+			<prenda Nombre="Camisa" claveProducto="1"  VentaNoc="SI">
+				<Descripcion><![CDATA[Camisa manga larga azul]]></Descripcion>
+				<Precio>$500</Precio>
+				<Imagen>/img/camisa.jpg</Imagen>
+				<talla>Mediana</talla>
+			</prenda>
 			<prenda Nombre="Camisa" claveProducto="1">
 				<Descripcion><![CDATA[Camisa manga larga azul]]></Descripcion>
 				<Precio>$500</Precio>
 				<Imagen>/img/camisa.jpg</Imagen>
+				<talla>Mediana</talla>
 			</prenda>
-			<prenda Nombre="Bermuda" claveProducto="2">
-				<Descripcion><![CDATA[Bermuda color azul talla 32 ]]></Descripcion>
+			<prenda Nombre="Bermuda" claveProducto="2"  VentaNoc="SI">
+				<Descripcion><![CDATA[Bermuda color azul]]></Descripcion>
 				<Precio>$350</Precio>
 				<Imagen>/img/bermuda.jpg</Imagen>
+				<talla>Mediana</talla>
 			</prenda>
-			<prenda Nombre="camisa polo" claveProducto="3">
-				<Descripcion><![CDATA[Camisa tipo polo color azul obscuro talla M]]></Descripcion>
-				<Precio>$500</Precio>
+			<prenda Nombre="camisa polo" claveProducto="3"  VentaNoc="SI">
+				<Descripcion><![CDATA[Camisa tipo polo color azul]]></Descripcion>
+				<Precio>$500</Precio>				
 				<Imagen>/img/polo.jpg</Imagen>
+				<talla>Mediana</talla>
 			</prenda>
 			<prenda Nombre="Gorra" claveProducto="4">
 				<Descripcion><![CDATA[Gorra color rojo para caballero]]></Descripcion>
 				<Precio>$200</Precio>
 				<Imagen>/img/gorra.jpg</Imagen>
+				<talla>Mediana</talla>
 			</prenda>
-			<prenda Nombre="Pantalon" claveProducto="5">
+			<prenda Nombre="Pantalon" claveProducto="5"  VentaNoc="SI">
 				<Descripcion><![CDATA[Pantalon deportillo talla 32]]></Descripcion>
 				<Precio>$450</Precio>
 				<Imagen>/img/pantalonD.jpg</Imagen>
+				<talla>Mediana</talla>
 			</prenda>
 
 		</tipo>
 		<tipo Nombre ="Niño">
+			<prenda Nombre="Sombrero" claveProducto="1"  VentaNoc="SI">
+				<Descripcion><![CDATA[Sombrero]]></Descripcion>
+				<Precio>$800</Precio>
+				<Imagen>/img/prueba2.jpg</Imagen>
+				<talla>Mediana</talla>
+			</prenda>
 			
 
 		</tipo>
 		<tipo Nombre ="calzado">
+			<prenda Nombre="Zapatos" claveProducto="1"  VentaNoc="SI">
+				<Descripcion><![CDATA[Pantalon deportillo talla 32]]></Descripcion>
+				<Precio>$800</Precio>
+				<Imagen>/img/product_01.jpg</Imagen>
+				<talla>Mediana</talla>
+			</prenda>
 			<prenda Nombre="Zapatos" claveProducto="1">
 				<Descripcion><![CDATA[Pantalon deportillo talla 32]]></Descripcion>
 				<Precio>$800</Precio>
 				<Imagen>/img/product_01.jpg</Imagen>
+				<talla>Mediana</talla>
 			</prenda>
+
+			<prenda Nombre="Zapatos" claveProducto="1"  VentaNoc="SI">
+				<Descripcion><![CDATA[Pantalon deportillo talla 32]]></Descripcion>
+				<Precio>$800</Precio>
+				<Imagen>/img/product_01.jpg</Imagen>
+				<talla>Mediana</talla>
+			</prenda>
+
 
 
 		</tipo>

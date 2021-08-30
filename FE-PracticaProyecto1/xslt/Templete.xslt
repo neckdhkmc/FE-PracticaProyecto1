@@ -2,18 +2,19 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl"
 >
-	<xsl:output method="xml" indent="yes"/>
+	<xsl:output method="html" indent="yes"/>
 	<xsl:param name="oPcion" select="oPcion"></xsl:param>
 
 	<xsl:template match="Tienda">
 		<html lang="es">
+			<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+
 			<head>
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,700' rel='stylesheet' type='text/css'/>
+				<link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'/>
 
 				<meta charset="utf-8"/>
-				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-				<meta name="description" content=""/>
-				<meta name="author" content=""/>
-				<!--<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">-->
+
 
 				<title>Sixteen Clothing HTML Template</title>
 
@@ -24,11 +25,12 @@
 				<link rel="stylesheet" href="/assets/css/fontawesome.css"/>
 				<link rel="stylesheet" href="/assets/css/templatemo-sixteen.css"/>
 				<link rel="stylesheet" href="/assets/css/owl.css"/>
-				<!--<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>-->
+
 
 
 			</head>
 			<body>
+
 
 				<!-- Header -->
 				<header class="">
@@ -67,21 +69,7 @@
 
 										</li>
 									</xsl:for-each>
-									<!--<li class="nav-item active">
-										<a class="nav-link" href="index.html">
-											Home
-											<span class="sr-only">(current)</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="products.html">Our Products</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="about.html">About Us</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="contact.html">Contact Us</a>
-									</li>-->
+
 								</ul>
 							</div>
 						</div>
@@ -98,6 +86,10 @@
 					<xsl:when test="$oPcion = 3">
 						<xsl:call-template name="Contacto"></xsl:call-template>
 					</xsl:when>
+					<xsl:when test="$oPcion = 4">
+						<xsl:call-template name="Venta"></xsl:call-template>
+					</xsl:when>
+
 
 					<xsl:otherwise>
 
@@ -108,81 +100,6 @@
 					</xsl:otherwise>
 
 				</xsl:choose>
-
-
-				<!--<div class="best-features">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="section-heading">
-									<h2>
-										<xsl:value-of select="Datos/NombreTienda"/>
-									</h2>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="left-content">
-									<h4>
-										¿Buscas los mejores productos de temporada?
-									</h4>
-									<p>
-										<xsl:value-of select="Datos/Descripcion"/>
-									</p>
-									-->
-				<!--<ul class="featured-list">
-										<li>
-											<a href="#">Lorem ipsum dolor sit amet</a>
-										</li>
-										<li>
-											<a href="#">Consectetur an adipisicing elit</a>
-										</li>
-										<li>
-											<a href="#">It aquecorporis nulla aspernatur</a>
-										</li>
-										<li>
-											<a href="#">Corporis, omnis doloremque</a>
-										</li>
-										<li>
-											<a href="#">Non cum id reprehenderit</a>
-										</li>
-									</ul>-->
-				<!--
-									<a href="about.html" class="filled-button">Read More</a>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="right-image">
-									<img src="img/banner_3.jpg" alt=""/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="call-to-action">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="inner-content">
-									<div class="row">
-										<div class="col-md-8">
-											<h4>
-												Creative &amp; Unique <em>Sixteen</em> Products
-											</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
-										</div>
-										<div class="col-md-4">
-											<a href="#" class="filled-button">Purchase Now</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>-->
-
-
-
 				<footer>
 					<div class="container">
 						<div class="row">
@@ -201,11 +118,11 @@
 
 
 				<!-- Bootstrap core JavaScript -->
-				<script src="vendor/jquery/jquery.min.js"></script>
+				<!--<script src="vendor/jquery/jquery.min.js"></script>-->
 				<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-				<!-- Additional Scripts -->
+				<!--Additional Scripts-->
 				<script src="assets/js/custom.js"></script>
 				<script src="assets/js/owl.js"></script>
 				<script src="assets/js/slick.js"></script>
@@ -216,7 +133,7 @@
 
 
 
-				<script language = "text/Javascript">
+				<!--<script language = "text/Javascript">
 					cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
 					function clearField(t){                   //declaring the array outside of the
 					if(! cleared[t.id]){                      // function makes it static and global
@@ -225,7 +142,7 @@
 					t.style.color='#fff';
 					}
 					}
-				</script>
+				</script>-->
 
 
 			</body>
@@ -243,143 +160,84 @@
 					<div class="col-md-12">
 						<div class="text-content">
 							<h4>Clothing</h4>
-							<h2>Productos de Novedades la Villa</h2>
+							<h2>Productos de Moda la Villa</h2>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--<div class="products">
-			<div class="container">
-
-				<div class="col-md-12">
-					<div class="filters">
-						<ul>
-							<li class="active" data-filter="*">Todos los productos</li>
-							<li data-filter=".des">Recomendados</li>
-							<li data-filter=".dev">Ofertas</li>
-							<li data-filter=".gra">venta Nocturna</li>
-						</ul>
-					</div>
-				</div>
-				<xsl:for-each select="Productos/tipo/prenda">
-					<div class="product-item">
-						<a href="#">
-							<img src="{Imagen}" alt="" />
-						</a>
-						<div class="down-content">
-							<a href="#">
-								<h4>
-									<xsl:value-of select="@Nombre"/>
-								</h4>
-							</a>
-							<h6>
-								<xsl:value-of select="Precio"/>
-							</h6>
-							<p>
-								<xsl:value-of select="Descripcion"/>
-							</p>
-							<span>
-								valoracion: <xsl:value-of select="valoracion"/>
-
-							</span>
 
 
-						</div>
-					</div>
-				</xsl:for-each>
-
-
-
-			</div>
-
-
-
-		</div>-->
-
-		<div class ="col-lg-12" style="padding:10px;" >
+		<div class =" col-lg-12" style="padding:10px;" >
 			<div class="container">
 				<div class="products">
 					<div class="col-md-12">
 						<div class="filters">
 							<ul>
-								<xsl:for-each select="Productos/tipo">
+								<xsl:for-each select="Productos/tipo" >
 									<li>
-										<a  id="li{@Nombre}" class="tipomenu" data-id="{@Nombre}" style="cursor:pointer; padding:10px;">
+										<a  id="li{@Nombre}" class="link"  data-id="{@Nombre}" style="cursor:pointer; padding:30px;">
 											<xsl:value-of select="@Nombre"/>
 										</a>
 									</li>
 								</xsl:for-each>
 
 							</ul>
-
-
-							<!--<xsl:for-each select="Productos/tipo">
-								<ul>
-									<li class="active" data-filter="*">
-									<a id="li{@Nombre}" data-id="{@Nombre}" style="cursor:pointer;"></a>
-
-								</li>
-								
-								</ul>
-								
-
-							</xsl:for-each>-->
-
-							<!--<ul>
-								<li class="active" data-filter="*">Todos los productos</li>
-								<li data-filter=".des">Recomendados</li>
-								<li data-filter=".dev">Ofertas</li>
-								<li data-filter=".gra">venta Nocturna</li>
-							</ul>-->
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-12">
-					
-				<div class="row">
-					<xsl:for-each select="Productos/tipo">
+				<div>
+					<div class="container" style="padding-left:50px;">
+						<div class="products">
+							<xsl:for-each select="Productos/tipo">
+
+								<div id="{@Nombre}" class="tipo row">
+
+									<xsl:for-each select="prenda">
 
 
-						<xsl:for-each select="prenda">
-							<div id="{@Nombre}" class="tipoplatillo " >
+										<div class="col-lg-4" style="padding-bottom:50px" >
+											<div class="card" style="width: 18rem; heigth:100px;" >
+												<img class="card-img-top" src="{Imagen}" alt="Card image cap"  width="100" height="200"/>
+												<div class="card-body">
+													<h5 class="card-title">
+														<xsl:value-of select="@Nombre"/>
+													</h5>
+													<div class ="down-content">
+														<h6>
+															Precio: <xsl:value-of select="Precio"/>
+														</h6>
+														<p>
+															<xsl:value-of select="Descripcion"/>
+														</p>
+														<p>
+															Talla: <xsl:value-of select="talla"/>
+														</p>
+														<span>
+															valoracion: <xsl:value-of select="valoracion"/>
 
-								<div class="col-lg-4" style="padding-bottom:50px" >
-									<div class="card" style="width: 18rem; heigth:100px;" >
-										<img class="card-img-top" src="{Imagen}" alt="Card image cap"  width="100" height="200"/>
-										<div class="card-body">
-											<h5 class="card-title">
-												<xsl:value-of select="@Nombre"/>
-											</h5>
-											<div class ="down-content">
-												<h6>
-													<xsl:value-of select="Precio"/>
-												</h6>
-												<p>
-													<xsl:value-of select="Descripcion"/>
-												</p>
-												<span>
-													valoracion: <xsl:value-of select="valoracion"/>
+														</span>
 
-												</span>
+													</div>
 
+												</div>
 											</div>
 
 										</div>
-									</div>
+
+									</xsl:for-each>
 
 								</div>
-							</div>
-						</xsl:for-each>
+							</xsl:for-each>
+
+
+						</div>
+
+					</div>
 
 
 
-					</xsl:for-each>
 
-
-				</div>
-
-				
 				</div>
 
 			</div>
@@ -387,57 +245,35 @@
 
 
 		</div>
-		<script src="js/jq.js"></script>
+
+
+
+
 		<script>
+
 			$(document).ready(function()
 			{
-			<!--//$(".tipoplatillo").css("display","none");-->
-			$(".tipoplatillo").hide();
-			$("#Dama").show();
-			$("#Dama").addClass("Active");
-			$(".tipomenu").click(function()
+
+			$(".tipo").hide();
+			<!--$("#Dama").show();
+			$("#liDama").addClass("Active");-->
+			$(".link").click(function()
 			{
 			var nombre = $(this).data("id");
-			$(".tipomenu").removeClass("Active");
+			$(".link").removeClass("Active");
 			$(this).addClass("Active");
-			$(".tipoplatillo").hide();
+			$(".tipo").hide();
 			$("#"+nombre).show();
-			});
 
 
 			});
+
+
+
+			});
+
 		</script>
-		<!--<script>
 
-			-->
-		<!--//$(".tipoplatillo".css("display","none"))-->
-		<!--
-
-			$(document).ready(function()
-			{
-			-->
-		<!--//$(".tipoplatillo").css("display","none");-->
-		<!--
-			$(".tiporopa").hide();
-			$("#Dama").show();
-			$("#liDama").addClass("Active");
-			$(".tipomenu").click(function()
-			{
-			var nombre = $(this).data("id");
-			-->
-		<!--$(".tipomenu").removeClass("Active");
-			$(this).addClass("Active");-->
-		<!--
-			$(".tiporopa").hide();
-			$("#"+nombre).show();
-			});
-
-
-			});-->
-		<!--
-
-
-		</script>-->
 
 
 
@@ -446,6 +282,307 @@
 
 	</xsl:template>
 	<xsl:template name="Contacto">
+		<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCWeeateTaYGqsHhNcmoDfT7Us-vLDZVPs&amp;sensor=false&amp;language=en"></script>
+		<script src="/js/geolocalizacion.js"></script>
+		<div class="page-heading contact-heading header-text">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-content">
+							<h4>
+								<xsl:value-of select="Datos/NombreTienda"/>
+							</h4>
+							<h2>Contacta con nosotros</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="find-us">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="section-heading">
+							<h2>Buscanos en el mapa</h2>
+
+
+						</div>
+						<div class="col-lg-8" id="street">
+
+						</div>
+					</div>
+					<div class="col-md-8" style ="padding-top:20px;">
+
+
+						<div id="mapa"></div>
+
+
+					</div>
+					<div class="col-md-4">
+						<div class="left-content">
+							<h4>Buscanos en el mapa</h4>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester consectetur similiqu consectetur.<br></br>Lorem ipsum dolor sit amet, consectetur adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti.
+							</p>
+							<ul class="social-icons">
+								<li>
+									<a href="#">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-behance"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function()
+			{
+
+
+			getGeo();
+			dibujaMapa(19.0628528, -98.1422546);
+
+			});
+
+		</script>
+
+
+
+	</xsl:template>
+	<xsl:template name="Venta">
+		<div class="page-heading products-heading header-text" style="paddin-top:15px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-content">
+							<h4>Ropa de Moda La villa</h4>
+							<h2>Venta Noctura</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class =" col-lg-12" style="padding:10px;" >
+
+			<div>
+				<div class="container" style="padding-left:50px;">
+					<div class="products">
+						<xsl:for-each select="Productos/tipo">
+
+							<div id="{@Nombre}" class="tipo row">
+
+								<xsl:for-each select="prenda[@VentaNoc='SI']">
+
+
+									<div class="row" style="padding-bottom:10px; padding-top:10px; padding-rigth:10px;" >
+										<div class="card" style="width: 18rem; heigth:100px;" >
+											<img class="card-img-top" src="{Imagen}" alt="Card image cap"  width="100" height="200"/>
+											<div class="card-body">
+												<h5 class="card-title">
+													<xsl:value-of select="@Nombre"/>
+												</h5>
+												<div class ="down-content">
+													<h6>
+														Precio: <xsl:value-of select="Precio"/>
+													</h6>
+													<p>
+														<xsl:value-of select="Descripcion"/>
+													</p>
+													<p>
+														Talla: <xsl:value-of select="talla"/>
+													</p>
+													<span>
+														valoracion: <xsl:value-of select="valoracion"/>
+
+													</span>
+													<p>
+														Clave del producto: <xsl:value-of select="@claveProducto"/>
+
+													</p>
+													<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+														Comprar
+													</button>
+
+
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+
+
+
+								</xsl:for-each>
+
+							</div>
+						</xsl:for-each>
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-top:100px">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Registra tu compra en linea</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<!--<span aria-hidden="true"><![CDATA[&times;]]></span>-->
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<form action="ContactoVenta.aspx" method="post" class="tm-contact-form"
+	  oninput ="contact_Total.value=contact_numeropersonas.valueAsNumber*contact_personaExtra.valueAsNumber">
+							<div class="row" style="padding:10px;">
+								<div class="col-lg-12">
+									<label class="form-label">Nombre Competo:</label>
+									<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Nombre" required="true"/>
+								</div>
+								<div class="col-lg-12">
+									<label class="form-label">Direccion:</label>
+									<input type="text" id="contact_Direccion" name="contact_Direccion" class="form-control"  placeholder="Direccion" required="true"/>
+								</div>
+								<div class="col-lg-6">
+									<label class="form-label">Correo:</label>
+									<input type="text" id="contact_email" name="contact_email" class="form-control"  placeholder="Correo electronico" required="true"/>
+								</div>
+								
+								<div class="col-lg-6">
+									<label class="form-label">Telefono:</label>
+									<input type="text" id="contact_Direccion" name="contact_Direccion" class="form-control"  placeholder="Direccion" required="true"/>
+								</div>
+								<div class="col-lg-4">
+
+									<label class="form-label">Clave del producto:</label>
+									<input type="text" id="contact_Direccion" name="contact_Direccion" class="form-control"  placeholder="Direccion" required="true"/>
+								</div>
+								<div class="col-lg-4">
+									<label class="form-label">Numero de prendas:</label>
+									<input type="number" id="contact_numeropersonas" name ="contact_numeropersonas" class="form-control" value ="1" min="1" max="20" required="true"/>
+								</div>
+								<div class="col-lg-4">
+									<label class="form-label">Precio del producto:</label>
+									<input type="number" id="contact_personaExtra" name ="contact_personaExtra" class="form-control" value ="0" min="1" max="" required="true"/>
+								</div>
+								<div class="col-lg-4">
+									<label class="form-label">Fecha:</label>
+									<input type="date" id="contact_fecha" name="contact_fecha" class="form-control" placeholder="Nombre" required="true"/>
+								</div>
+								<div class="col-lg-4">
+									<label class="form-label">Hora:</label>
+									<input type="time" id="contact_hora" name="contact_hora" class="form-control" required="true" min ="06:00:00" max="22:00:00"/>
+								</div>
+								<div class="col-lg-4">
+									<label class="form-label">Total a pagar:</label>
+									<output id="contact_Total" name="contact_Total" class="form-control">1</output>
+								</div>
+								<div class="col-lg-12">
+									<h4>Datos Bancarios: </h4>								
+								</div>
+
+								<div class="col-lg-12"  style="padding-top:10px;">
+									<label class="form-label">Nombre del propietario:</label>
+									<input type="text" id="contact_Direccion" name="contact_Direccion" class="form-control"  placeholder="Direccion" required="true"/>
+								</div>
+								<div class="col-lg-12" style="padding-top:10px;">
+									<label class="form-label">Numero de tarjeta:</label>
+									<input type="text" id="contact_Direccion" name="contact_Direccion" class="form-control"  placeholder="Direccion" required="true"/>
+								</div>
+									<div class="col-lg-12">
+									<label class="form-label">Vigecia:</label>
+									<input type="text" id="contact_Direccion" name="contact_Direccion" class="form-control"  placeholder="Direccion" required="true"/>
+								</div>
+				
+								<div class="col-lg-12">
+									
+									<button  type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary" name="submit">Realizar compra</button>
+								
+							
+							
+								
+								</div>
+								
+								
+								
+
+
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div id="google-map"></div>
+								<!--<div id="mapa">
+
+							</div>-->
+							</div>
+						</form>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<!--<script>
+
+			$(document).ready(function()
+			{
+
+			$(".tipo").hide();
+			-->
+		<!--$("#Dama").show();
+			$("#liDama").addClass("Active");-->
+		<!--
+			$(".link").click(function()
+			{
+			var nombre = $(this).data("id");
+			$(".link").removeClass("Active");
+			$(this).addClass("Active");
+			$(".tipo").hide();
+			$("#"+nombre).show();
+
+
+			});
+
+
+
+			});
+
+		</script>-->
+
+
+
+
 
 	</xsl:template>
 	<xsl:template name="Inicio">
@@ -457,34 +594,7 @@
 			<input type="hiden"></input>
 		</div>
 
-		<!--<div class="contenedor" >
-			<ul class="slider">
-				<li id="slider1">
-					<img src="/img/banner_5.jpg"></img>
-					
-				</li>
-				<li id="slider2">
-					<img src="/img/banner_2.jpg"></img>
 
-				</li>
-				<li id="slider3">
-					<img src="/img/banner_1.jpg"></img>
-
-				</li>
-			</ul>
-			<ul class="menu_">
-				<li>
-					<a href="#slider1">1</a>
-				</li>
-				<li>
-					<a href="#slider2">2</a>
-				</li>
-				<li>
-					<a href="#slider3">3</a>
-				</li>
-			</ul>
-			
-		</div>-->
 
 		<div class="best-features">
 			<div class="container">
@@ -558,6 +668,7 @@
 		</div>
 
 	</xsl:template>
+
 
 
 </xsl:stylesheet>
